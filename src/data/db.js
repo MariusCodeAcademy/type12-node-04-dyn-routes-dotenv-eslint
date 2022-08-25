@@ -66,3 +66,7 @@ const people = [
     hasCar: false,
   },
 ];
+
+module.exports = {
+  people,
+};

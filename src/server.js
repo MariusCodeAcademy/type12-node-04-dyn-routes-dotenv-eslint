@@ -1,8 +1,7 @@
-'use strict';
-
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
+// eslint-disable-next-line no-unused-vars
 const colors = require('colors');
 
 const app = express();
@@ -17,14 +16,15 @@ const users = [
 
 // MIddleware
 app.use(morgan('dev'));
+app.use(cors());
 
 // Routes
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
   res.send('hello world');
 });
 
 // GET /api/users - grazina visus userius
-app.get('/api/users', (req, res) => {
+app.get('/api/users', (_req, res) => {
   res.json(users);
 });
 
