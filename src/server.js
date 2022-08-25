@@ -3,6 +3,7 @@ const cors = require('cors');
 const morgan = require('morgan');
 // eslint-disable-next-line no-unused-vars
 const colors = require('colors');
+const { people } = require('./data/db');
 
 const app = express();
 const PORT = 3000;
@@ -44,6 +45,30 @@ app.get('/api/users/:uid', (req, res) => {
 // GET /api/users/age/30 - grazina useri kurio amzius yra 30 (ne pagal indexa)
 
 // GET /api/users/age/lt/33 - grazina userius kuriu amzius maziau nei 33 (ne pagal indexa)
+
+// GET /api/people/ - grazina visus zmones su visa info
+app.get('/api/people/', (req, res) => {
+  // console.log('people ===', people);
+  res.json(people);
+});
+
+// GET /api/people/ages - grazina visu zmoniu amiu masyva
+app.get('/api/people/ages', (req, res) => {
+  // console.log('people ===', people);
+  const ages = people.map((pObj) => pObj.age);
+  console.log(`ages ${ages}`.blue);
+  res.json(people.map((pObj) => pObj.age));
+});
+
+// GET /api/people/males - grazina visus vyrus
+app.get('/api/people/males', (req, res) => {
+  const males = people.filter((pObj) => pObj.sex === 'male');
+  // console.log('males ==='.bgYellow, males);
+  res.json(males);
+});
+// GET /api/people/females - grazina visas moteris
+
+// GET /api/people/ages/avg - grazina visu zmoniu amziu vidurki
 
 app.use((req, res) => {
   res.status(404).json({ msg: 'Not found' });
