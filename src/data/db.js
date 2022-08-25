@@ -1,5 +1,6 @@
 const people = [
   {
+    id: 1,
     name: 'Jonas',
     surname: 'Jonaitis',
     sex: 'male',
@@ -10,6 +11,7 @@ const people = [
     hasCar: false,
   },
   {
+    id: 2,
     name: 'Severija',
     surname: 'Piktutytė',
     sex: 'female',
@@ -20,6 +22,7 @@ const people = [
     hasCar: true,
   },
   {
+    id: 3,
     name: 'Valdas',
     surname: 'Vilktorinas',
     sex: 'male',
@@ -30,6 +33,7 @@ const people = [
     hasCar: false,
   },
   {
+    id: 4,
     name: 'Virginijus',
     surname: 'Uostauskas',
     sex: 'male',
@@ -40,6 +44,7 @@ const people = [
     hasCar: true,
   },
   {
+    id: 5,
     name: 'Samanta',
     surname: 'Uostauskienė',
     sex: 'female',
@@ -50,6 +55,7 @@ const people = [
     hasCar: true,
   },
   {
+    id: 6,
     name: 'Janina',
     surname: 'Stalautinskienė',
     sex: 'female',
