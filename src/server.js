@@ -28,7 +28,18 @@ app.get('/api/users', (req, res) => {
   res.json(users);
 });
 
+// GET /api/users/:uid - grazina useri kurio id yra uid (ne pagal indexa)
 // GET /api/users/2 - grazina useri kurio id yra 2 (ne pagal indexa)
+app.get('/api/users/:uid', (req, res) => {
+  console.log('req.params ===', req.params);
+  const uid = +req.params.uid;
+  const findUser = users.find((uObj) => uObj.id === uid);
+  if (findUser) {
+    res.json(findUser);
+    return;
+  }
+  res.status(404).json({ msg: `user with id ${uid} not found` });
+});
 
 // GET /api/users/age/30 - grazina useri kurio amzius yra 30 (ne pagal indexa)
 

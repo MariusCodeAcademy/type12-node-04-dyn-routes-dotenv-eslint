@@ -1,11 +1,11 @@
 <mxfile host="65bd71144e">
     <diagram id="aGEhEcKIQwWKC8-lZaDE" name="Page-1">
-        <mxGraphModel dx="1904" dy="1739" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="2090" dy="1852" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="2" value="Route Anatomija" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=21;" vertex="1" parent="1">
-                    <mxGeometry x="30" y="20" width="180" height="30" as="geometry"/>
+                    <mxGeometry width="180" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="GET&amp;nbsp; manoPuslapis.lt /api/users&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=31;" vertex="1" parent="1">
                     <mxGeometry x="30" y="120" width="700" height="30" as="geometry"/>
