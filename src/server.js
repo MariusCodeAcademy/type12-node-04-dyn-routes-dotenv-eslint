@@ -69,6 +69,10 @@ app.get('/api/people/males', (req, res) => {
 // GET /api/people/females - grazina visas moteris
 
 // GET /api/people/ages/avg - grazina visu zmoniu amziu vidurki
+app.get('/api/people/ages/avg', (req, res) => {
+  const avg = people.reduce((total, pObj) => total + pObj.age, 0) / people.length;
+  res.json({ avg: +avg.toFixed(2) });
+});
 
 app.use((req, res) => {
   res.status(404).json({ msg: 'Not found' });
