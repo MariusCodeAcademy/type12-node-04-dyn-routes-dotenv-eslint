@@ -31,10 +31,10 @@ app.get('/api/users', (_req, res) => {
 
 // GET /api/users/:uid - grazina useri kurio id yra uid (ne pagal indexa)
 // GET /api/users/2 - grazina useri kurio id yra 2 (ne pagal indexa)
-app.get('/api/users/:uid', (req, res) => {
+app.get('/api/users/:uid/', (req, res) => {
   console.log('req.params ===', req.params);
-  const uid = +req.params.uid;
-  const findUser = users.find((uObj) => uObj.id === uid);
+  const { uid } = req.params;
+  const findUser = users.find((uObj) => uObj.id === +uid);
   if (findUser) {
     res.json(findUser);
     return;
